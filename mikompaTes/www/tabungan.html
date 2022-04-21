@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Aplikasi MI Kompa</title>
+
+  <!-- CSS  -->
+  <link href="css/material-icon.css" type="text/css" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/after-index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</header>
+
+  <div class="navbar-fixed">
+  <nav class="purple darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">MI KOMPA</a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</div>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#" class="center-align"> </a></li>
+        <li>
+        <div class="center">
+          <div class="col s7">
+            <img class="responsive-img" width="150" src="img/logo.webp">
+            <h5 class="black-text">MI KOMPA</h5>
+          </div>
+
+        </div>
+        </li>
+        <li><a href="#" class="center-align">Profil Sekolah</a> </li>
+        <li><a href="#" class="center-align">Kebijakan</a> </li>
+        <li><a href="#" class="center-align">Pengaturan</a> </li>
+        <li><a href="#" class="center-align">Tentang Aplikasi</a> </li>
+      </ul>
+
+<main>
+    <div class="container">
+      <div class="center">
+        <h5 class="orange-text">Data Tabungan</h5>
+      </div>
+      <div class="card" id="profil-container">
+        <div id="tmbl-tambah-murid" class="center">
+          <div class="card-content">
+          <a id="ditambah" class="waves-effect waves-light btn green modal-trigger disabled" data-target="modal-tambah"><i class="material-icons left">add</i>Tambah Data</a>
+          <br>
+          <br>
+
+          <a id="diedit" class="waves-effect waves-light btn orange modal-trigger disabled" data-target="modal_edit"><i class="material-icons left">edit</i>Edit Data</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-content center" id="loader">
+
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <p class="center grey-text">Loading....</p>
+
+      </div>
+
+        <div class="untuk-murid">
+          <p id="infoh" class="center red-text"></p>
+
+          <!-- Start Tabel -->
+            <table class="striped" id="data-tabel">
+            <thead class="deep-purple lighten-4">
+              <tr>
+                  <th class="centered">NO</th>
+                  <th class="centered">Nama Murid</th>
+              </tr>
+            </thead>
+
+            <tbody id="body_tabel">
+              <!-- Isi Tabel -->
+            </tbody>
+          </table>
+      </div>
+
+<!-- end Card -->
+      </div>
+
+      <!-- Modal Tambah -->
+      <div id="modal-tambah" class="modal">
+        <div class="modal-content center">
+          <h5 class="orange-text text-center" id="jdl_tambah">Tambah Data</h5>
+          <p id="oto_nom" class="grey-text"><i>Nomor Terisi otomatis</i></p>
+          <div id="lagi_nambah" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+          <div class="input-field col s12">
+            <select id="no_urut" class="validate browser-default">
+              <option id="auto_urut" value="1">1</option>
+            </select>
+          </div>
+          <div class="input-field col s12">
+            <input id="nama_lengkap" type="text" class="validate">
+            <label for="nama_lengkap">Nama Lengkap</label>
+          </div>
+          <a class="modal-close waves-effect waves-light btn red left">Batal</a>
+          <a class="waves-effect waves-light btn green right" onclick="tambahMurid()">Tambah</a>
+          <br><br>
+        </div>
+      </div>
+
+      <!-- Modaledit-->
+      <div id="modal_edit" class="modal">
+        <div class="modal-content center">
+          <h5 class="orange-text text-center" id="jdl_edit">Edit Data</h5>
+          <div id="lagi_edit" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+          <div class="input-field col s12">
+            <select id="select_edit" class="validate browser-default">
+              <option value="" disabled selected>Pilih nomor...</option>
+            </select>
+          </div>
+          <div class="input-field col s12">
+            <input id="nama_edit" type="text" class="validate" disabled>
+          </div>
+          <a class="waves-effect waves-light btn red left" onclick="benernih()">Hapus</a>
+          <a class="waves-effect waves-light btn orange right" onclick="updateMurid()">Update</a>
+          <br><br>
+        </div>
+      </div>
+
+      <!-- Modal Proses -->
+      <div id="modal-proses" class="modal">
+        <div class="modal-content">
+          <h5 class="center" id="isi-proses">Mengirim..</h5>
+          <div id="sedang-proses" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+        <div class="center" id="sukses-proses"><i class='material-icons medium green-text'>check_circle</i> </div>
+        </div>
+      </div>
+
+
+      <!-- Modal Konfirmasi Hapus -->
+      <div id="modal_konfir_hps" class="modal">
+        <div class="modal-content center">
+          <i class='material-icons medium red-text'>delete_forever</i>
+          <p class="center" id="tanya_hapus"><b>Yakin ingin menghapus data</b></p>
+          <h4 id="akan_hps" class="red-text"></h4>
+          <a class="modal-close modal-trigger waves-effect waves-light btn orange left" data-target="modal_edit">Batal</a>
+          <a class="modal-close modal-trigger waves-effect waves-light btn red right" data-target="modal_edit" onclick="hapusMurid()">Hapus</a>
+          <br><br>
+
+        </div>
+      </div>
+<!-- end container -->
+    </div>
+
+</main>
+
+<div class="footer-fixed purple darken-4" id="footer-next">
+  <footer class="page-footer ">
+    <ul class="tabs tabs-fixed-width tab-demo z-depth-1  orange darken-3">
+        <li class="tab"><a href="murid.html" class="grey-text waves-effect waves-light">Sebelumnya</a></li>
+        <!-- <li class="tab disabled"><a href="#test3">##</a></li> -->
+        <li class="tab"><a href="beranda.html" id="ke-beranda" class="white-text waves-effect waves-light">Lewati</a></li>
+      </ul>
+
+</footer>
+</div>
+
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/tabungan.js"></script>
+
+  </body>
+</html>

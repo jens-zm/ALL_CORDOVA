@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Aplikasi MI Kompa</title>
+
+  <!-- CSS  -->
+  <link href="css/material-icon.css" type="text/css" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/after-index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</header>
+
+  <div class="navbar-fixed">
+  <nav class="purple darken-4" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">MI KOMPA</a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</div>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#" class="center-align"> </a></li>
+        <li>
+        <div class="center">
+          <div class="col s7">
+            <img class="responsive-img" width="150" src="img/logo.webp">
+            <h5 class="black-text">MI KOMPA</h5>
+          </div>
+
+        </div>
+        </li>
+        <li><a href="#" class="center-align">Profil Sekolah</a> </li>
+        <li><a href="#" class="center-align">Kebijakan</a> </li>
+        <li><a href="#" class="center-align">Pengaturan</a> </li>
+        <li><a href="#" class="center-align">Tentang Aplikasi</a> </li>
+      </ul>
+
+<main>
+    <div class="container">
+      <div class="center">
+        <h5 class="orange-text">Data Guru / Pengajar</h5>
+      </div>
+      <div class="card" id="profil-container">
+        <div class="card-content center" id="loader">
+
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <p class="center grey-text">Loading....</p>
+
+        </div>
+        <div class="card-content" id="edit-profil">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="nama_lengkap" type="text" class="validate">
+            <label for="nama_lengkap">Nama Lengkap dan Gelar</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">wc</i>
+            <select id="jenis-kelamin" class="validate">
+              <option value="" disabled selected>Pilih satu</option>
+              <option value="L">Laki-Laki</option>
+              <option value="P">Perempuan</option>
+            </select>
+              <label for="jenis-kelamin">Jenis Kelamin</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">contacts</i>
+            <input id="nip-nuptk" type="number" class="validate">
+            <label for="nip-nuptk">NIP/NUPTK</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">local_activity</i>
+            <input id="jabatan" type="text" class="validate">
+            <label for="jabatan">Jabatan</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">add_location</i>
+            <textarea id="alamat" class="materialize-textarea"></textarea>
+            <label for="alamat">Alamat</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">perm_phone_msg</i>
+            <input id="no-wahtsapp" type="tel" class="validate">
+            <label for="no-wahtsapp">No Whatsapp</label>
+          </div>
+
+          <div class="center">
+            <button class="btn green" type="submit" name="action" onclick="simpanProfil()">Simpan Profil<i class="material-icons left">save</i></button>
+            <br><br>
+            <button id="batal_edt" class="btn orange" type="submit" name="action" onclick="function ref(){location.reload();}ref();">Batal<i class="material-icons left">save</i></button>
+            <br><br><br>
+          </div>
+
+        </div>
+        <div class="card-content center" id="edit-foto">
+          <div class="input-field col s12 center" id="upload-foto">
+            <p><b>UPLOAD FOTO PROFIL</b></p>
+            <p class="grey-text"><i>Gunakan foto kotak/persegi rasio 1:1</i></p>
+            <!-- <iframe width="200" height="280" src="https://script.google.com/macros/s/AKfycbzLUKDRgir8oYntFsIwUSBnrsZ6PxM9FE9rDlMF1IwJcVtj6hW7/exec" frameborder="0" allowfullscreen></iframe> -->
+          </div>
+      <button class="btn waves-effect waves-light green" type="submit" name="action" onclick="selesaiUpl()">Selesai<i class="material-icons left">save</i></button>
+        </div>
+<!-- //End Edit -->
+<!-- Tampil Profil -->
+  <div class="card-content" id="tampil-profil">
+    <div class="center">
+      <div class="col s2">
+        <img id="avatar"src="img/ava.webp" width="240" height="240" alt="Foto Profil" class="circle">
+        <a id="tmblEditFoto" class="btn-floating btn-large waves-effect waves-light red right" onclick="editFoto()"><i class="material-icons">add_a_photo</i></a>
+
+
+      </div>
+      <div class="center" id="myName">
+        <h5 class="blue-text" id="data-nama">.......</h5>
+        <table class="striped">
+        <tbody>
+          <tr>
+            <td class="prof-dat">Jenis Kel</td>
+            <td class="prof-isi" id="data-kel">.......</td>
+          </tr>
+          <tr>
+            <td class="prof-dat">Email</td>
+            <td class="prof-isi" id="data-email">.......</td>
+          </tr>
+          <tr>
+            <td class="prof-dat">NUPTK</td>
+            <td class="prof-isi" id="data-nuptk">.......</td>
+          </tr>
+          <tr>
+            <td class="prof-dat">Jabatan</td>
+            <td class="prof-isi" id="data-jabatan">.......</td>
+          </tr>
+          <tr>
+            <td class="prof-dat">Alamat</td>
+            <td class="prof-isi" id="data-alamat">.......</td>
+          </tr>
+          <tr>
+            <td class="prof-dat">WhatsApp</td>
+            <td class="prof-isi" id="data-wa">.......</td>
+          </tr>
+          <tr>
+            <td class="prof-dat">Status</td>
+            <td class="prof-isi" id="data-status">.......</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </div>
+      <button class="btn orange" type="submit" name="action" onclick="editProfil()">Edit Profil<i class="material-icons left">border_color</i></button>
+<br><br><br>
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+
+      <!-- Modal Proses -->
+      <div id="modal-proses" class="modal">
+        <div class="modal-content">
+          <h5 class="center" id="isi-proses">Mengirim..</h5>
+          <div id="sedang-proses" class="progress">
+            <div class="indeterminate"></div>
+        </div>
+        <div class="center" id="sukses-proses"><i class='material-icons medium green-text'>check_circle</i> </div>
+        </div>
+      </div>
+
+    </div>
+</main>
+
+<div class="footer-fixed purple darken-4" id="footer-next">
+  <footer class="page-footer ">
+    <ul class="tabs tabs-fixed-width tab-demo z-depth-1  orange darken-3">
+        <li class="tab disabled"><a href="#" class="grey-text">Sebelumnya</a></li>
+        <!-- <li class="tab disabled"><a href="#test3">##</a></li> -->
+        <li class="tab"><a href="murid.html" class="white-text waves-effect waves-light">Selanjutnya</a></li>
+      </ul>
+
+</footer>
+</div>
+
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/profil.js"></script>
+
+  </body>
+</html>

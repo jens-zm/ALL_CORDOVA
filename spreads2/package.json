@@ -1,0 +1,33 @@
+{
+  "name": "com.absen2.app",
+  "displayName": "Absen2b",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.0.0",
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "159269419955-ca0llaov57aqce43ffs03r791erkhuge.apps.googleusercontent.com",
+        "WEB_APPLICATION_CLIENT_ID": "AIzaSyCeeHqaXq2GjuDDF6kkgRUAmscnZp14iq8",
+        "PLAY_SERVICES_VERSION": "15.0.1"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,18 @@
+cordova create folder org.aplikasi.app namaApp
+cordova platform add android
+cordova platform remove android
+cordova build android
+cordova build android --release
+
+
+cordova build --release android 
+
+
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore jens.keystore app-release-unsigned.apk jens
+
+
+
+zipalign -v 4 app-release-unsigned.apk absen.apk
+zipalign -v 4 app-release-unsigned.apk GuruV2.apk
+zipalign -v 4 app-release-unsigned.apk AbsenV2.apk

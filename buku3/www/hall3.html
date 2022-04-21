@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">  
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+  <!-- CSS  -->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <title>Hello World</title>
+    </head>
+    <body>
+
+        <!-- navigasi start -->
+        <div class="navbar-fixed">
+<nav id="header-bar" class="visible">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo judul" id="logo-jdl">Akidah Ahlak Kel. 1 MI</a>
+      <a href="#" data-target="daftar-isi" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+		<ul class="right hide-on-med-and-down">
+        <li><a href="#" data-target="daftar-isi"><i class="material-icons right">view_module</i>Daftar Isi</a></li>
+      </ul>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+  <ul id="daftar-isi" class="sidenav collapsible" onclick="iklan()">
+    <li class="pink"><a class="white-text">ISI BUKU :</a></li>
+            <li><a href="hall3.html#2"><span class="badge">ii</span>Lembar Pengesahan</a></li>
+            <li><a href="hall3.html#3"><span class="badge">i</span>Kata Pengantar</a></li>
+            <li><a href="hall3.html#4"><span class="badge">iv</span>Pedoman Transliterasi</a></li>
+            <li><a href="hall3.html#6"><span class="badge">vi</span>Daftar Isi</a></li>
+            <li><a href="hall3.html#7"><span class="badge">vii</span>Petunjuk Penggunaan Buku</a></li>
+            <li><a href="hall3.html#8"><span class="badge">viii</span>KI dan KD</a></li>
+            <li><a href="hall3.html#12"><span class="badge">xii</span>Pemetaan KI dan KD</a></li>
+
+
+                <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><a href="#17">Lorem ipsum dolor sit amet.</a></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+
+  </ul>
+          
+
+      <!-- navigasi end -->
+        <div class="app">
+            <div id="deviceready" class="blink">
+                <div id="w-konten">
+	                <div id="konten" onclick="hideR()">
+
+	                </div>
+                </div>
+            </div>
+
+
+      <div id='ngambang' class="fixed-action-btn visible">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">pageview</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating green" onclick="perbesar()"><i class="material-icons">zoom_in</i></a></li>
+    <li><a class="btn-floating black btn-large" onclick="reset()"><b>RESET</b></a></li>
+    <li><a class="btn-floating blue" onclick="perkecil()"><i class="material-icons">zoom_out</i></a></li>
+  </ul>
+</div>
+
+
+
+
+        </div>
+          <script src="js/jquery-3.5.1.js"></script>
+          <script src="js/materialize.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/konten.js"></script>
+        <script src="js/hammer.min.js"></script>
+        <script src="js/zoom.js"></script>
+<!--         <script>
+           $(document).ready(function(){
+            var konten = document.getElementById('konten');
+            hammerIt(konten);
+            });
+        </script> -->
+        
+    </body>
+</html>

@@ -1,0 +1,91 @@
+.wall {
+	position: absolute;
+  z-index: -1;
+
+}
+.bg-home{
+	background-color: black;
+	border:3px solid white;
+	border-radius: 25px;
+	float: center;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	z-index: 1;
+	opacity: 70%;
+}
+.menu-home {
+	width: 80%;
+	border: 2px solid white;
+	background: rgba(100, 100, 100, 0.7);
+	border-radius: 30px;
+	margin-top: 15px;
+	padding: 20px;
+}
+.trans-b {
+	opacity: 50%;
+}
+.iniaja{
+	position: absolute;
+	z-index: 2;
+}
+.m-list{
+	margin: 10px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+  z-index: 999;
+}
+
+.daftar-isi{
+	width: auto;
+	background-color: rgba(100, 100, 100, 0.7);
+}
+.judul {
+	font-size: 16px !important;
+}
+
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.header-hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 2s linear;
+}
+
+#wadah{
+	background-color: blue;
+	width: 100vw;
+}
+/*#w-konten{
+	width: 100vw !important;
+	height: auto;
+	color: blue;
+}
+*/
+#konten{
+	width: 100vw;
+	height: auto;
+
+
+  touch-action: pan-y !important;
+}
+/*img{
+	width: 100%;
+	height: auto;
+	align-items: center;
+}
+*/
+
+.kotak{
+	width: 100vw;
+	height:100vh;
+	color: grey;
+}

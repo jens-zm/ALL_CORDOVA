@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>MI Kompa Online</title>
+         <!-- CSS  -->
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link href="../css/materialize-icon.css" rel="stylesheet">
+        <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body class="grey begron">
+        <!-- App start -->
+        <div class="app">
+          <div class="navbar-fixed">
+            <nav class="purple" role="navigation">
+              <div class="nav-wrapper wadah"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="#"  id="notif"><i class="material-icons right">notifications_active</i>Notifikasi</a></li>
+                  <li><a href="#" onclick="logout()" ><i class="material-icons right red-text">power_settings_new</i>Logout</a></li>
+                </ul>
+                <a href="#" data-target="sidenav-1" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" class="right"><i id="muter2"class="material-icons">autorenew</i></a>
+              </div>
+            </nav>
+            </div>
+
+
+
+
+
+        <!-- LEFT SIDEBAR	 -->
+        <ul id="sidenav-1" class="sidenav sidenav-fixed">
+          <li class="hide-on-med-and-down z-depth-2 center-align" ><a href="index.html" id="menu-desk" class="purple darken-1 white-text">MI Kompa</a></li>
+          <li class="hide-on-med-and-down">
+            <div class="row center-align">
+              <a href="">
+              <div id="ava-desktop" class="col l7">
+                <img class="hoverable circle responsive-img " id="ava_l" src="../img/blank_ava.webp">
+              </div>
+                <h6 id="nama_profil_l" class="nama_profil center-align blue-text"></h6>
+                <span id="jabatan_l" class="jabatan center-align grey-text"></span>
+              </a>
+          </div>
+        </li>
+        <div class="menu-mobile purple hide-on-large-only">
+          <h5 class="white-text name center-align">Menu Lengkap</h5>
+        </div>
+        <li class="li-vertical"><a href="index.html"><i class="material-icons active">home</i>Beranda</a></li>
+        <!-- <li class="li-vertical"><a href="#"><i class="material-icons">assignment_turned_in</i>Kehadiran</a></li>
+        <li class="li-vertical"><a href="#"><i class="material-icons">school</i>Absen Guru</a></li> -->
+        <li class="li-vertical"><div class="divider"></div></li>
+        <li class="li-vertical"><a class="active" href="settings.html"><i class="material-icons">settings</i>Pengaturan</a></li>
+        <br>
+        <li class="hide-on-large-only"><a href="#" onclick="logOut()" class="red-text"><i class="material-icons red-text">power_settings_new</i>Keluar</a></li>
+        </ul>
+
+
+        <!-- RIGHT SIDEBAR	 -->
+        <ul id="sidenav-2" class="sidenav">
+          <li><a class="subheader">Notifikasi</a></li>
+          <li><a href="https://github.com/dogfalo/materialize/" target="_blank">Github</a></li>
+          <li><a href="https://twitter.com/MaterializeCSS" target="_blank">Twitter</a></li>
+          <li><a href="http://next.materializecss.com/getting-started.html" target="_blank">Docs</a></li>
+        </ul>
+
+
+        <main>
+          <div class="body-konten">
+            <div class="card white card-kostum">
+              <div class="card-content">
+                <!-- konten -->
+                <h5 class="center-align">Detail Profil</h5>
+                <div class="row">
+                  <div class="col s12 m4 l4">
+                    <img class="responsive-img materialboxed" id="foto_profil" src="../img/blank_ava.webp">
+                    <div class="right-align">
+                      <a id="ubah_foto" class="waves-effect waves-light btn red"><i class="material-icons left">add_a_photo</i>ubah foto</a>
+                    </div>
+                  </div>
+                  <div class="col s12 m8 l8">
+                    <h5 id="nama_lengkap">Nama Lengkap</h5>
+                    <div class="row">
+                      <!-- Nip -->
+                      <div class="col s12 m4 l3 data_profil">
+                        NO INDUK
+                      </div>
+                      <div id="identitas"class="col s12 m8 l9 isi_profil">
+                        ...
+                      </div>
+                      <!-- Jenis kelamin -->
+                      <div class="col s12 m4 l3 data_profil">
+                        JENIS KELAMIN
+                      </div>
+                      <div id="jeniskelamin"class="col s12 m8 l9 isi_profil">
+                        ...
+                      </div>
+                      <!-- Alamat -->
+                      <div class="col s12 m4 l3 data_profil">
+                        ALAMAT
+                      </div>
+                      <div id="alamat" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- Tempat lahir -->
+                      <div class="col s12 m4 l3 data_profil">
+                        TEMPAT LAHIR
+                      </div>
+                      <div id="tempatlahir" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- Tempat lahir -->
+                      <div class="col s12 m4 l3 data_profil">
+                        TANGGAL LAHIR
+                      </div>
+                      <div id="tanggallahir" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- Jabatan -->
+                      <div class="col s12 m4 l3 data_profil">
+                        KELAS
+                      </div>
+                      <div id="kelas" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- No Hp -->
+                      <div class="col s12 m4 l3 data_profil">
+                        NO HP
+                      </div>
+                      <div id="nohp" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- email -->
+                      <div class="col s12 m4 l3 data_profil">
+                        EMAIL
+                      </div>
+                      <div id="email" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- username -->
+                      <div class="col s12 m4 l3 data_profil">
+                        USERNAME
+                      </div>
+                      <div id="username" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- Akses -->
+                      <div class="col s12 m4 l3 data_profil">
+                        AKSES
+                      </div>
+                      <div id="akses" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+                      <!-- Status -->
+                      <div class="col s12 m4 l3 data_profil">
+                        STATUS
+                      </div>
+                      <div id="status" class="col s12 m8 l9 isi_profil">
+                        ...
+                    </div>
+
+                  </div>
+                  <a class="waves-effect waves-light btn orange"><i class="material-icons left">edit</i>ubah profil</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+        <!-- App End -->
+        </div>
+        <!-- cordova -->
+        <script src="../cordova.js"></script>
+        <script src="js/index.js"></script>
+        <!-- materialize -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/init.js"></script>
+        <script src="../js/pulltorefresh.min.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/profil-waktu.js"></script>
+
+
+        <script type="text/javascript">
+        // Cek Akses Murid
+         cekMurid();
+          // Data USER
+          const usr = JSON.parse(localStorage.getItem('user'));
+          $('#nama_profil_l').html(usr['NAMA_LENGKAP']);
+          $('#jabatan_l').html(usr['KELAS']);
+          $('#ava_l').attr('src', usr['AVA']);
+
+          // Detail Identitas
+          $('#foto_profil').attr('src', usr['AVA']);
+          $('#nama_lengkap').html(usr['NAMA_LENGKAP']);
+          $('#identitas').html(usr['IDENTITAS']);
+          $('#jeniskelamin').html(usr['JENIS_KELAMIN']);
+          $('#alamat').html(usr['ALAMAT']);
+          $('#tempatlahir').html(usr['TEMPAT_LAHIR']);
+          $('#tanggallahir').html(usr['TANGGAL_LAHIR']);
+          $('#kelas').html(usr['KELAS']);
+          $('#nohp').html(usr['NO_HP']);
+          // $('#email').html(usr['EMAIL']);
+          $('#username').html(usr['USERNAME']);
+          $('#akses').html(usr['AKSES']);
+          $('#status').html(usr['STATUS']);
+
+
+          </script>
+    </body>
+</html>

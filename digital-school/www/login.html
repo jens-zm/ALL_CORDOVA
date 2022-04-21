@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda">
+        <meta name="keywords" content="MI Kompa Parungkuda Sukabumi, e learning madrasah">
+        <meta name="author" content="MI Kompa">
+        <!-- Meta Social -->
+        <meta property="og:site_name" content="MI Kompa Online">
+        <meta property="og:title" content="MI Kompa Online" />
+        <meta property="og:description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda" />
+        <meta property="og:image" itemprop="image" content="img/logo.png">
+        <meta property="og:type" content="website" />
+        <meta property="og:updated_time" content="1440432930" />
+
+          <!-- Meta browser -->
+        <meta name="theme-color" content="#29b6f6"/>
+        <meta name="msapplication-navbutton-color" content="#29b6f6"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#29b6f6"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>MI Kompa Online</title>
+         <!-- CSS  -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link href="css/materialize-icon.css" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!-- cordova -->
+        <script src="cordova.js"></script>
+
+        <!-- materialize -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body class="grey begron">
+        <!-- App start -->
+        <div class="app">
+            <!-- Desktop nav -->
+            <div class="navbar-fixed">
+                <nav class="light-blue" role="navigation">
+                  <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="#" target="_blank"><i class="material-icons left">info_outline</i>Tentang Aplikasi</a></li>
+                    </ul>
+                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#" target="_blank" class="hide-on-large-only right"><i class="material-icons">info_outline</i></a>
+                    </div>
+                </nav>
+            </div>
+            <!-- LEFT SIDEBAR	 -->
+            <ul id="nav-mobile" class="sidenav">
+                <div class="menu-mobile light-blue">
+                <h5 class="white-text name center-align">Menu Lengkap</h5>
+                </div>
+                <li><a href="https://mikompa.sch.id" target="_blank"><i class="material-icons">school</i>Profil Madrasah</a></li>
+                <li><a href="#"><i class="material-icons">info</i>Tentang Aplikasi</a></li>
+                <li><a href="#"><i class="material-icons">download</i>Download Aplikasi</a></li>
+                <li><a href="#"><i class="material-icons">pan_tool</i>Pripacy Policy</a></li>
+            </ul>
+            <br>
+            <div class="container">
+                <div class="section">
+                  <div id="kontener-welcome" class="row">
+                  <!-- Login Form -->
+                  <div class="col s12 m6 l5">
+                    <div class="card rounded">
+                  <div class="card-content blue-text">
+                    <span class="card-title center-align"><b>Form Login</b></span>
+                    <div class="center-align">
+                    <p class="red-text" id="warning-login"></p>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">account_circle</i>
+                          <input name="username" id="input-username" type="text" maxlength="10" minlength="7" class="validate">
+                          <label for="input-username">Username</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">lock</i>
+                          <input name="password" id="input-password" type="password" class="validate">
+                          <label for="input-password">Kata Sandi</label>
+                        </div>
+                        <p>
+                        <div class="center-align">
+                          <label>
+                            <input id="remember" type="checkbox" name="remember-me" class="filled-in light-blue" value="Ingat Saya" checked="checked" />
+                            <span>Biarkan saya tetap masuk</span>
+                          </label>
+                        </p>
+                        </div>
+                        <br>
+                        <div class="center-align">
+                        <button class="btn waves-effect waves-light green" id="tmbl-login">Masuk
+                          <i class="material-icons right">arrow_forward</i>
+                        </button>
+                        <br><br>
+                        </div>
+                    </div>
+                  </div>
+
+                  </div>
+                  </div>
+                  <!-- Download section -->
+                  <div class="col s12 m6 l7 hide-on-small-only">
+                    <div class="icon-block center-align">
+                      <h5 class="judul-dw center white-text"><b>MI Kompa Online</b></h5>
+                      <p class="white-text">Unduh aplikasi Android <b>Mi Kompa Online</b> untuk akses lebih mudah</p>
+                      <img class="hoverable" src="img/qr-download.svg" id="qr" alt="Qr Download Aplikasi MI Kompa Online">
+                      <br>
+                      <a class="waves-effect waves-light btn light-blue rouned-10"><i class="material-icons left">download</i>Download Aplikasi</a>
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+              </div>
+
+        <!-- App End -->
+        </div>
+
+        <script>
+          $('#logo').animate({
+            opacity: 1,
+          }, 3000 );
+          $('#alamat').animate({
+            width: "100%",
+            opacity: 1,
+          }, 2000 );
+          $('#isi-welocome').delay( 4000 ).fadeOut( 1000 );
+
+        // Cek Isi
+        // var usr='';
+        // var pass='';
+        // $('#input-username').on('change', function(){
+        //   usr = $('#input-username').val().toLowerCase();
+        //   $('#input-username').val(usr);
+        //   cekIsi();
+        // });
+        // $('#input-password').on('change', function(){
+        // pass = $('#input-password').val();
+        // cekIsi();
+        // });
+        // function cekIsi(){
+        // if (usr != '' && pass != '') {
+        //   $('#tmbl-login').removeClass('disabled');
+        // }
+        // }
+// Login
+ $(document).ready(function() {
+   $('#tmbl-login').click(function(){
+
+    // Now call the function inside fetch promise resolver
+
+    fetch('https://script.google.com/macros/s/AKfycbxucv-gr2XuZw08Qt1oEVHr7CaiiFCUkLtcBGBfwzrw8t11401b/exec?data=users1')
+      .then(response => response.json())
+      .then((jsonResponse) => {
+        var hasil = jsonResponse['hasil'];
+        console.log(hasil.length);
+      for (let i= 0; i< hasil.length; i++) {
+        const element = hasil[i]['NAMA_LENGKAP'];
+        console.log(element);
+
+      }
+      })
+
+
+
+ });
+
+ })
+</script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Asvie App</title>
+  <link rel="stylesheet" href="css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+</head>
+<body>
+  <div id="app">
+    <div class="panel panel-left panel-login panel-cover panel-resizable panel-init">
+          <div class="page"  data-name="home">
+            <div class="page-content">
+              <div class="block-title text-align-center">INFORMASI APP</div>
+              <div class="list links-list">
+                <ul>
+                  <li>
+                    <a href="/action-sheet/" class="panel-close">Cara Aktivasi</a>
+                  </li>
+                  <li>
+                    <a href="/action-sheet/" class="panel-close">Kontak Pengembang</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="panel panel-left panel-home panel-cover panel-resizable panel-init">
+          <div class="page" data-name="home">
+            <div class="page-content">
+              <div class="block-title text-align-center">MENU APLIKASI</div>
+              <div class="list links-list">
+                <ul>
+                  <li>
+                    <a href="/accordion/" class="panel-close">Profil Pesantren</a>
+                  </li>
+                  <li>
+                    <a href="/accordion/" class="panel-close">Tentang Aplikasi</a>
+                  </li>
+                  <li>
+                    <a href="/action-sheet/" class="panel-close">Pengaturan</a>
+                  </li>
+                  <li>
+                    <a href="/action-sheet/" class="panel-close">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="/action-sheet/" class="panel-close">Kontak Pengembang</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+    <!-- menu majmu -->
+    <div class="panel panel-right panel-majmu panel-cover panel-resizable panel-init">
+      <div class="page"  data-name="home">
+        <div class="page-content">
+          <div class="block-title text-align-center">Daftar Isi Majmu</div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Bacaan Tahlil</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Surat Yaasin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
+      <!-- Page Welcome -->
+      <div class="page page-home bg-color-teal">
+        <div class="page-content">
+          <div class="block welcome">
+            <img data-src="img/logo-asvie.webp" class="lazy lazy-fade-in logo-lazy center" />
+            <div class="block-title block-title-medium text-align-center text-color-white naskh1">
+              <span
+                class="typer"
+                id="some-id"
+                data-words="السلفية نورالحكمة"
+                data-colors="white"
+                data-delay="150"
+                data-loop="1">
+              </span>
+            </div>
+
+            <p class="text-align-center text-color-yellow" id="alamat">Alamat : Kp. Suweng Gawir Luhur RT/RW. 013/006 Desa Sundawenang Kec. Parungkuda Kab. Sukabumi</p>
+            <div class="text-align-center">
+              <div class="preloader color-yellow"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Page Login -->
+      <div class="page stacked">
+        <div class="page-content">
+          <div class="block">
+            <div class="block-title block-title-medium text-align-center text-color-white">Login Screen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+  .welcome{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img.logo-lazy {
+  width: 80%;
+  height: auto;
+  display: block;
+  }
+  </style>
+  <script src="cordova.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/framework7.bundle.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/typer.js"></script>
+</body>
+</html>

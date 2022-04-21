@@ -1,0 +1,130 @@
+
+  <div class="page" id="login-page"  data-name="login">
+    <div class="navbar">
+      <div class="navbar-bg sliding"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel=".panel-login">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons md-only">menu</i>
+          </a>
+        </div>
+        <div class="title ">Asvie App</div>
+        <div class="right">
+          <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+            <i class="icon f7-icons if-not-md">search</i>
+            <i class="icon material-icons md-only">search</i>
+          </a>
+        </div>
+        <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Search components"/>
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="page-content bg-color-gray">
+      <div class="block-title block-title-medium text-align-center text-color-white">Aktifasi Aplikasi</div>
+      <!-- untuk aktivasi -->
+      <div class="card text-align-center">
+        <div class="card-header col-tengah">
+          <div class="block">
+            <p>Lengkapi data dibawah ini</p>
+          </div>
+        </div>
+        <div class="card-content card-content-padding">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Nama Lengkap</div>
+                  <div class="item-input-wrap">
+                    <input id="nama" type="text" placeholder="Tulis Nama" />
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Nomor HP</div>
+                  <div class="item-input-wrap">
+                    <input id="no-hp" type="tel" placeholder="Isi nomor hp" />
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+                <!-- provinsi -->
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Provinsi</div>
+                  <div class="item-input-wrap input-dropdown-wrap">
+                    <select id="pilih-provinsi">
+                      <option selected="true" disabled="disabled">Pilih provinsi</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+              <!-- Kabupaten -->
+              <li id="kabupaten" class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Kabupaten</div>
+                  <div class="item-input-wrap input-dropdown-wrap">
+                    <select id="pilih-kabupaten">
+                      <option selected="true" disabled="disabled">Pilih Kabupaten</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+            <!-- Kecamatan -->
+              <li id="kecamatan" class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Kecamatan</div>
+                  <div class="item-input-wrap input-dropdown-wrap">
+                    <select id="pilih-kecamatan">
+                      <option selected="true" disabled="disabled">Pilih Kecamatan</option>
+                    </select>
+                  </div>
+                </div>
+              </li>
+              <!-- Desa -->
+                <li id="desa" class="item-content item-input item-input-outline">
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">Desa/Kelurahan</div>
+                    <div class="item-input-wrap input-dropdown-wrap">
+                      <select id="pilih-desa">
+                        <option selected="true" disabled="disabled">Pilih desa/kelurahan</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+
+                <li id="kampung" class="item-content item-input item-input-outline">
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">Kp. Rt/Rw atau nama jalan</div>
+                    <div class="item-input-wrap">
+                      <textarea id="data-kampung" class="resizable" placeholder="Isi alamat lengkap"></textarea>
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer center">
+          <br>
+          <div class="block">
+            <button id="aktifkan-app" class="button button-fill button-round disabled">Aktifkan Aplikasi</button>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  </script>

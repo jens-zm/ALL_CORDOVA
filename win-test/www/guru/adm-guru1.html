@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>MI Kompa Online</title>
+         <!-- CSS  -->
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link href="../css/materialize-icon.css" rel="stylesheet">
+        <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/all.min.css" type="text/css" rel="stylesheet" />
+        <link href="../css/fontawesome.min.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body class="grey begron">
+        <!-- App start -->
+        <div class="app">
+          <div class="navbar-fixed">
+            <nav class="purple" role="navigation">
+              <div class="nav-wrapper wadah"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="#"  id="notif"><i class="material-icons right">notifications_active</i>Notifikasi</a></li>
+                  <li><a href="#" onclick="logout()" ><i class="material-icons right red-text">power_settings_new</i>Logout</a></li>
+                </ul>
+                <a href="#" data-target="sidenav-1" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" class="right"><i id="muter2"class="material-icons">autorenew</i></a>
+              </div>
+            </nav>
+            </div>
+
+
+
+
+
+        <!-- LEFT SIDEBAR	 -->
+        <ul id="sidenav-1" class="sidenav sidenav-fixed">
+          <li class="hide-on-med-and-down z-depth-2 center-align" ><a href="index.html" id="menu-desk" class="purple darken-1 white-text">MI Kompa</a></li>
+          <li class="hide-on-med-and-down">
+            <div class="row center-align">
+              <a href="profil.html">
+              <div id="ava-desktop" class="col l7">
+                <img class="hoverable circle responsive-img " id="ava_l" src="../img/blank_ava.webp">
+              </div>
+                <h6 id="nama_profil_l" class="nama_profil center-align blue-text"></h6>
+                <span id="jabatan_l" class="jabatan center-align grey-text"></span>
+              </a>
+          </div>
+        </li>
+        <div class="menu-mobile purple hide-on-large-only">
+          <h5 class="white-text name center-align">Menu Lengkap</h5>
+        </div>
+        <li class="li-vertical"><a href="index.html"><i class="fas fa-house-user fa-lg jarax"></i>Beranda</a></li>
+        <li class="li-vertical"><a href="absen-murid.html"><i class="fas fa-check-circle fa-lg jarax"></i>Absen Murid</a></li>
+        <li class="li-vertical"><a class="active" href="adm-guru.html"><i class="fas fa-chalkboard-teacher fa-lg jarax"></i>Administrasi Guru</a></li>
+        <li class="li-vertical"><a href="konfigurasi.html"><i class="fas fa-tools fa-lg jarax"></i>Konfigurasi</a></li>
+        <li class="li-vertical"><div class="divider"></div></li>
+        <li class="li-vertical"><a href="#"><i class="fas fa-cog fa-lg jarax"></i>Pengaturan</a></li>
+        <br>
+        <li class="hide-on-large-only"><a href="#" onclick="logOut()" class="red-text"><i class="material-icons red-text">power_settings_new</i>Keluar</a></li>
+        </ul>
+
+
+        <!-- RIGHT SIDEBAR	 -->
+        <ul id="sidenav-2" class="sidenav">
+          <li><a class="subheader">Notifikasi</a></li>
+          <li><a href="https://github.com/dogfalo/materialize/" target="_blank">Github</a></li>
+          <li><a href="https://twitter.com/MaterializeCSS" target="_blank">Twitter</a></li>
+          <li><a href="http://next.materializecss.com/getting-started.html" target="_blank">Docs</a></li>
+        </ul>
+
+
+        <main>
+          <div class="body-konten">
+            <div class="card white card-kostum">
+              <div class="isi-card">
+                <h5 class="center-align purple-text">ADMINISTRASI GURU</h5>
+                <br>
+                  <ul class="collapsible popout">
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        PROGRAM TAHUNAN
+                        <span class="new badge red" data-badge-caption="Aktif"></span>
+                      </div>
+                      <div class="collapsible-body">
+                        <div class="row">
+                          <div class="col s12 m12 l4 center-align">
+                            <a class="waves-effect waves-light btn"><i class="material-icons left">add</i>Buat</a>
+                          </div>
+                          <br class="hide-on-large-only">
+                          <br class="hide-on-large-only">
+                          <br class="hide-on-large-only">
+                          <div class="col s12 m12 l4 center-align">
+                            <a class="waves-effect waves-light btn"><i class="material-icons left">file_download</i>Download</a>
+                          </div>
+                          <div class="col s12 m12 l4 center-align hide-on-med-and-down">
+                            <a class="waves-effect waves-light btn"><i class="material-icons left">print</i>Cetak</a>
+                          </div>
+
+                        </div>
+                      </div>
+                    </li>
+                    <li id="promes">
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        PROGRAM SEMESTER
+                      </div>
+                      <div class="collapsible-body row">
+                          <a href="#">
+                          <div class="col s12 m6 l4">
+                            <div class="blue tmbl-aksi hoverable">
+                              <i class="fas fa-plus-square"></i>  Buat
+                            </div>
+                          </div>
+                          </a>
+
+
+                          <a href="#">
+                          <div class="col s12 m6 l4">
+                            <div class="green tmbl-aksi hoverable">
+                              <i class="fas fa-arrow-circle-down"></i> Download
+                            </div>
+                          </div>
+                          </a>
+
+
+                          <a href="#" class="hide-on-med-and-down">
+                          <div class="col s12 m6 l4">
+                            <div class="teal tmbl-aksi hoverable">
+                              <i class="fas fa-print"></i> Cetak
+                            </div>
+                          </div>
+                          </a>
+
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        SILABUS
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        RPP
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        PEMETAAN KI/KD
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        JURNAL HARIAN
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        ABSEN MANUAL
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        ABSEN MURID
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        DATA NILAI
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        TABUNGAN MURID
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        DATA INFAK
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                    <li id="cover" onclick="getFocus()">
+                      <div class="collapsible-header jarak-coll orange white-text">
+                        <i class="material-icons">access_time</i>
+                        COVER / SAMPUL
+                      </div>
+                      <div class="collapsible-body"><p>Tahun Ajaran tidak aktif</p></div>
+                    </li>
+                  </ul>
+              </div>
+
+
+            </div>
+          </div>
+
+          <!-- Modal Swich -->
+          <div id="modal-swich" class="modal rouned-10">
+            <form id="form-swich" method="post">
+              <div class="modal-content">
+                <h5 id="judul-swich" class="center-align">Modal swich</h5>
+                <p class="center-align" id="konten-swich">A bunch of text</p>
+              </div>
+              <div class="modal-footer" id="footer-swich">
+                <a id="batal"class="modal-close waves-effect waves-light btn red left"><i class="material-icons left">close</i>Batal</a>
+                <button id="ok-prosess" class="modal-close btn waves-effect waves-light right green" type="submit" name="action">Ya
+                      <i class="material-icons left">check_circle</i>
+                </button>
+              </div>
+              <br>
+            </form>
+          </div>
+
+          <!-- Modal Status -->
+          <div id="modal-status" class="modal rouned-10">
+              <div class="modal-content">
+                <h6 id="judul-status" class="center-align">Modal Status</h6>
+                <div class="center-align">
+                  <i id="icon-status" class='material-icons large'></i>
+                </div>
+              </div>
+          </div>
+        </main>
+
+        <!-- App End -->
+        </div>
+        <!-- cordova -->
+        <script src="../cordova.js"></script>
+        <!-- <script src="js/index.js"></script> -->
+        <!-- materialize -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/init.js"></script>
+        <script src="../js/all.min.js"></script>
+        <script src="../js/fontawesome.min.js"></script>
+        <script src="../js/pulltorefresh.min.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/profil-waktu.js"></script>
+
+
+
+        <script type="text/javascript">
+        // Cek Akses Admin
+          cekGuru();
+          // Data USER
+          const usr = JSON.parse(localStorage.getItem('user'));
+          $('#nama_profil_l').html(usr['NAMA_LENGKAP']);
+          $('#jabatan_l').html(usr['KELAS']);
+          $('#ava_l').attr('src', usr['AVA']);
+
+          $('#tahun_ajaran').html('T.A. Aktif '+tahunajaran);
+
+          $('#promes').click(function(){
+            $('#promes').focus();
+          });
+
+          function getFocus() {
+          document.getElementById("cover").focus({preventScroll:false});
+          }
+
+          </script>
+    </body>
+</html>

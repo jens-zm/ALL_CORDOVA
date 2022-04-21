@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Asvi App</title>
+
+  <!-- CSS  -->
+  <link href="css/material-icon.css" type="text/css" rel="stylesheet">
+<!--   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Asvi App</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Tentang Aplikasi</a></li>
+        <li><a href="#">Syarat dan Ketentuan</a></li>
+        <li><a href="#">Pertanyaan</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Tentang Aplikasi</a></li>
+        <li><a href="#">Syarat dan Ketentuan</a></li>
+        <li><a href="#">Pertanyaan</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+
+<!-- Preloader and it's background. -->
+<div class="preloader-background">
+<div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+    <!-- Laman Terkunci -->
+    <div class="col s12 m6" id="divTerkunci">
+      <div class="card red darken-4 white-text">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h1 class="center light-blue-text"><i class="material-icons">lock</i></h1>
+            <h5 class="center">APLIKASI TERKUNCI</h5>
+
+            <p class="light">Mohon maaf, anda tidak memiliki hak untuk mengakses aplikasi ini, aplikasi ini dibuat dan dikembangkan untuk kalangan Pondok pesantren Assalafiyyah Nurul Hikmah</p>
+            <p class="light">Silahkan Klik Minta akses, dan isi form untuk mendapatkan kode pembuka aplikasi</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-action">
+      <center>
+          <a class="waves-effect waves-light orange btn center" onclick="minta()"><i class="material-icons left">lock_open
+          </i>Minta Kode Akses</a>
+      </center>
+       </div>
+      </div>
+    </div>
+    <!-- Tutup Laman Terkunci -->
+
+
+<!-- Form Permintaan Kunci -->
+<div class="row" id="divMintaKunci">
+    <div class="col s12 m6">
+      <div class="card grey lighten-2">
+        <div class="card-content black-text">
+          <span class="card-title center"><b>Isi Formulir</b></span>
+          
+<div class="row">
+    <form class="col s12">
+      <p>Isi form dibawah ini kemudian klik buat kode</p>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="nama-user" type="text" class="validate tooltipped" data-position="right" data-tooltip="Isi nama dulu..">
+          <label for="nama-user">Nama Lengkap</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">edit_location</i>
+          <input id="alamat-user" type="text" class="validate">
+          <label for="alamat-user">Alamat</label>
+        </div>
+      </div>
+      <center>
+          <a class="waves-effect waves-light orange btn center" onclick="buatKode()"><i class="material-icons left">lock_open
+</i>Buat Kode</a>
+      </center>
+    </form>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tutup Form Permitaan kunci -->
+
+
+
+
+  <!-- Form mintan Kunci -->
+<div class="row" id="divKodeDibuat">
+    <div class="col s12 m6">
+      <div class="card grey lighten-2">
+        <div class="card-content black-text">
+          <span class="card-title center" id="halo-user"><b>Kode Telah Dibuat</b></span>
+      <p>Kode aplikasi ini telah dibuat, silahkan hubungi nomor whatsapp dibawah untuk mendapatkannya, <br>Klik nomor untuk menghubungi</p>
+      <h4 class="center green-text" onclick="kirimWa()"><b>0852-1659-7415</b></h4>
+      <center>
+
+    <p>Jika sudah mempunyai kode akses bisa langsung memasukan kode</p>
+    <br>
+          <a class="waves-effect waves-light orange btn center" onclick="masukkanKode()"><i class="material-icons left">lock_open
+</i>Masukan Kode</a>
+<br>
+      </center>
+      <br>
+       <p class="center">Atau bisa <a href="#" onclick="mintaLagiKode()">minta kode lagi</a> </p>
+       <br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tutup Minta kunci -->
+
+
+<!-- Masukan Kunci -->
+<div class="row" id="divMasukkanKunci">
+    <div class="col s12 m6">
+      <div class="card grey lighten-2">
+        <div class="card-content">
+          <span class="card-title center"><b>Masukan Kode</b></span>
+          
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock_open</i>
+          <input id="jawaban-app" type="number" class="validate">
+          <label for="jawaban-app">Kode Aplikasi</label>
+        </div>
+      </div>
+      <center>
+          <a class="waves-effect waves-light btn center" onclick="cobaBuka()"><i class="material-icons left">lock_open
+</i>Buka Aplikasi</a>
+    </center>
+    </form>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tutup Masukan kunci -->
+
+
+  <!-- Modal Structure -->
+  <div id="modalError" class="modal">
+    <div class="modal-content center">
+      <h5>Operasi gagal..</h5>
+      <p><b>Periksa terkoneksi internet</b></p>
+      <p>Untuk pertama kali, proses ini membutuhkan koneksi internet</p>
+      <p>setelah proses ini berhasil, aplikasi dapat berjalan secara offline</p>
+    </div>
+    <div class="modal-footer">
+      <div class="center">
+      <a href="#!" class="modal-close waves-effect waves-light btn center"><i class="material-icons left">check_circle</i>Coba Lagi</a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  </div> <!-- Tutup container -->
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+
+  </body>
+</html>

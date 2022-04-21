@@ -1,0 +1,17 @@
+.footer-fixed footer {
+ padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+body {
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+}
+
+/* main {
+ flex: 1 0 auto;
+} */
+.footer-fixed {
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+}

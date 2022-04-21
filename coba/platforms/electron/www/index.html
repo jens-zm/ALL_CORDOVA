@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <!-- meta global -->
+  <meta name="description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda">
+  <meta name="keywords" content="MI Kompa Parungkuda Sukabumi, e learning madrasah">
+  <meta name="author" content="MI Kompa">
+  <!-- Meta Social -->
+  <meta property="og:site_name" content="MI Kompa Online">
+  <meta property="og:title" content="MI Kompa Online" />
+  <meta property="og:description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda" />
+  <meta property="og:image" itemprop="image" content="img/logo.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="1440432930" />
+
+    <!-- Meta browser -->
+  <meta name="theme-color" content="#29b6f6"/>
+  <meta name="msapplication-navbutton-color" content="#29b6f6"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#29b6f6"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+ <title>MI Kompa Online</title>
+
+ <!-- CSS  -->
+ <link rel="shortcut icon" href="favicon.ico">
+ <link href="css/materialize-icon.css" rel="stylesheet">
+ <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <script src="js/jquery-3.6.0.min.js"></script>
+ <script src="js/materialize.js"></script>
+ <script src="js/init.js"></script>
+
+</head>
+<body class="grey begron">
+<div class="navbar-fixed">
+ <nav class="purple darken-1" role="navigation">
+   <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+     <ul class="right hide-on-med-and-down">
+       <li><a href="https://mikompa.sch.id" target="_blank"><i class="material-icons left">language</i>Website</a></li>
+     </ul>
+     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+     <a href="https://mikompa.sch.id" target="_blank" class="hide-on-large-only right"><i class="material-icons">language</i></a>
+ </nav>
+
+</div>
+<!-- LEFT SIDEBAR	 -->
+<ul id="nav-mobile" class="sidenav">
+  <div class="menu-mobile purple darken-1">
+    <h5 class="white-text name center-align">Menu Lengkap</h5>
+  </div>
+  <li><a href="https://mikompa.sch.id" target="_blank"><i class="material-icons">school</i>Profil Madrasah</a></li>
+  <li><a href="#"><i class="material-icons">info</i>Tentang Aplikasi</a></li>
+  <li><a href="#"><i class="material-icons">download</i>Download Aplikasi</a></li>
+  <li><a href="#"><i class="material-icons">pan_tool</i>Pripacy Policy</a></li>
+</ul>
+
+
+
+
+  <div id="isi-welocome"class="container">
+    <div class="section">
+      <div class="row">
+        <!-- Login Form -->
+      <div class="col s12 m5">
+         <div class="">
+          <div class="blue-text">
+            <img id="logo" src="img/logo.webp" class="responsive-img" alt="">
+          </div>
+
+        </div>
+      </div>
+
+        <div class="col s12 m7">
+          <div class="typewriter icon-block center-align">
+            <h5 id="teks-sekolah" class="center yellow-text">Madrasah Ibtidaiyah Kompa</h5>
+            <p id="alamat" class="white-text">Alamat : Jl. Raya Siliwangi Kp. Cipanggulaan Des. Kompa Kec. Parungkuda - Kabupaten Sukabumi</p>
+          </div>
+          <div class="">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+
+        <footer  class="page-footer orange hide-on-small-only">
+           <div class="container">
+             <div  class="row">
+               <div class="col l6 s12">
+                 <h5 id="#tentang" class="white-text">MI Kompa Online</h5>
+                 <p class="grey-text text-lighten-4"><b>MI Kompa Online</b> adalah platform digital untuk management kelas, pembelajaran online, serta administrasi guru dan murid di lingkungan Madrasah Ibtidaiyah Kompa - Parungkuda - Kab. Sukabumi</p>
+
+
+               </div>
+               <div class="col l6 s12">
+                 <h5 class="white-text">MI Kompa Connect</h5>
+                 <ul>
+                   <li><a class="white-text" href="https://mikompa.sch.id">Website</a></li>
+                   <li><a class="white-text" href="https://web.facebook.com/miskompa">Facebook</a></li>
+                   <li><a class="white-text" href="https://www.youtube.com/channel/UCqi5GKOKNemuGGIAJjs3ZtQ">Youtube</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="footer-copyright">
+             <div class="container center-align">
+             Made by Love : <a class="white-text" href="https://wa.me/qr/GZMJ5ENMOGZVC1" target="_blank"> @jens_zm</a>
+             </div>
+           </div>
+         </footer>
+
+         <!--  Scripts-->
+        <script type="text/javascript">
+        $( document ).ready(function() {
+		   $.ajax({
+			  url:"actions/cek_status.php",
+			  success:function(data) {
+			  if (data == "anonym") {
+			  	setTimeout(function() {
+              window.location = 'rute.php';
+            }, 5500);
+			  }
+			  }
+			})
+		});
+
+
+          $('#logo').animate({
+            opacity: 1,
+          }, 3000 );
+          $('#alamat').animate({
+            width: "100%",
+            opacity: 1,
+          }, 2000 );
+          $('#isi-welocome').delay( 5000 ).fadeOut( 1000 );
+        </script>
+         </body>
+        </html>

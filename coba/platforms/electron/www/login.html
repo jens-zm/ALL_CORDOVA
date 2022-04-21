@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <!-- meta global -->
+   <meta name="description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda">
+   <meta name="keywords" content="MI Kompa Parungkuda Sukabumi, e learning madrasah">
+   <meta name="author" content="MI Kompa">
+   <!-- Meta Social -->
+   <meta property="og:site_name" content="MI Kompa Online">
+   <meta property="og:title" content="MI Kompa Online" />
+   <meta property="og:description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda" />
+   <meta property="og:image" itemprop="image" content="img/logo.png">
+   <meta property="og:type" content="website" />
+   <meta property="og:updated_time" content="1440432930" />
+   <!-- Meta browser -->
+   <meta name="theme-color" content="#29b6f6"/>
+   <meta name="msapplication-navbutton-color" content="#29b6f6"/>
+   <meta name="apple-mobile-web-app-status-bar-style" content="#29b6f6"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+ <title>MI Kompa Online</title>
+
+ <!-- CSS  -->
+  <link rel="shortcut icon" href="favicon.ico">
+ <link href="css/materialize-icon.css" rel="stylesheet">
+ <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <script src="js/jquery-3.6.0.min.js"></script>
+ <script src="js/materialize.js"></script>
+ <script src="js/init.js"></script>
+
+</head>
+<body class="grey begron">
+<div class="navbar-fixed">
+ <nav class="purple darken-1" role="navigation">
+   <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+     <ul class="right hide-on-med-and-down">
+       <li><a href="https://mikompa.sch.id" target="_blank"><i class="material-icons left">language</i>Website</a></li>
+     </ul>
+     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+     <a href="https://mikompa.sch.id" target="_blank" class="hide-on-large-only right"><i class="material-icons">language</i></a>
+ </nav>
+
+</div>
+<!-- LEFT SIDEBAR	 -->
+<ul id="nav-mobile" class="sidenav">
+  <div class="menu-mobile purple darken-1">
+    <h5 class="white-text name center-align">Menu Lengkap</h5>
+  </div>
+  <li><a href="https://mikompa.sch.id" target="_blank"><i class="material-icons">school</i>Profil Madrasah</a></li>
+  <li><a href="#"><i class="material-icons">info</i>Tentang Aplikasi</a></li>
+  <li><a href="#"><i class="material-icons">download</i>Download Aplikasi</a></li>
+  <li><a href="#"><i class="material-icons">pan_tool</i>Pripacy Policy</a></li>
+</ul>
+<!-- RIGHT SIDEBAR	 -->
+<ul id="nav-notif" class="sidenav">
+<li><a class="subheader"><h5>Tentang Aplikasi</h5></a></li>
+<li>
+<div class="">
+  <p>Adalah portal pembelajaran online Madrasah Ibtidaiyah kompa - Parungkuda - Sukabumi dalam memenuhi kebutuhan pembelajaran online dimasa pandemi khususnya</p>
+</div>
+</li>
+</ul>
+
+
+
+
+  <div id="login-cont" class="container">
+    <div class="section">
+      <div class="row">
+
+
+
+        <!-- Login Form -->
+      <div class="col s12 m6 l5">
+         <div class="card rounded">
+        <div class="card-content purple-text">
+          <span class="card-title center-align"><b>Form Login</b></span>
+          <div class="center-align">
+          <p class="red-text" id="warning-login"></p>
+          </div>
+          <div class="row">
+            <form id="loginForm" class="col s12" action="cek-login.php" method="post">
+              <input name="login" id="form-login" type="hidden" class="validate" value="login">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input name="username" id="input-username" type="text" maxlength="10" minlength="7" class="validate">
+                <label for="input-username">Username</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input name="password" id="input-pasword" type="password" class="validate">
+                <label for="input-pasword">Kata Sandi</label>
+              </div>
+              <p>
+              <div class="center-align">
+                <label>
+                  <input type="checkbox" name="remember-me" value="Ingat Saya" class="filled-in light-blue" checked="checked" />
+                  <span>Biarkan saya tetap masuk</span>
+                </label>
+              </p>
+              </div>
+              <br>
+              <div class="center-align">
+              <button class="btn waves-effect waves-light green disabled" id="tmbl-login" type="submit">Method Post PHP
+                <i class="material-icons right">arrow_forward</i>
+              </button>
+              <br><br>
+               
+              </div>
+            </form>
+            <a id="ajax-aja" class="btn">Method Ajax</a>
+
+          </div>
+        </div>
+
+        </div>
+        </div>
+
+        <div class="col s12 m6 l7 hide-on-small-only">
+          <div class="icon-block center-align">
+            <h5 class="judul-dw center white-text"><b>MI Kompa Online</b></h5>
+            <p class="white-text">Unduh aplikasi Android <b>Mi Kompa Online</b> untuk akses lebih mudah</p>
+            <img class="hoverable" src="img/qr-download.svg" id="qr" alt="Qr Download Aplikasi MI Kompa Online">
+            <br>
+            <a class="waves-effect waves-light btn light-blue rouned-10"><i class="material-icons left">download</i>Download Aplikasi</a>
+          </div>
+          <div class="">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+        <footer  class="page-footer orange hide-on-small-only">
+           <div class="container">
+             <div  class="row">
+               <div class="col l6 s12">
+                 <h5 id="#tentang" class="white-text">MI Kompa Online</h5>
+                 <p class="grey-text text-lighten-4"><b>MI Kompa Online</b> adalah platform digital untuk management kelas, pembelajaran online, serta administrasi guru dan murid di lingkungan Madrasah Ibtidaiyah Kompa - Parungkuda - Kab. Sukabumi</p>
+
+
+               </div>
+               <div class="col l6 s12">
+                 <h5 class="white-text">MI Kompa Connect</h5>
+                 <ul>
+                   <li><a class="white-text" href="https://mikompa.sch.id">Website</a></li>
+                   <li><a class="white-text" href="https://web.facebook.com/miskompa">Facebook</a></li>
+                   <li><a class="white-text" href="https://www.youtube.com/channel/UCqi5GKOKNemuGGIAJjs3ZtQ">Youtube</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="footer-copyright">
+             <div class="container center-align">
+             Made by Love : <a class="white-text" href="https://wa.me/qr/GZMJ5ENMOGZVC1" target="_blank"> @jens_zm</a>
+             </div>
+           </div>
+         </footer>
+
+
+         <!--  Scripts-->
+         <script type="text/javascript">
+          // Animation
+         $('#login-cont').animate({
+           opacity: 1,
+         }, 2000 );
+
+
+
+         var usr='';
+         var pass='';
+           $('#input-username').on('change', function(){
+            usr = $('#input-username').val().toLowerCase();
+            $('#input-username').val(usr);
+            cekIsi();
+          });
+          $('#input-pasword').on('change', function(){
+           pass = $('#input-password').val();
+           cekIsi();
+         });
+         function cekIsi(){
+           if (usr != '' && pass != '') {
+             $('#tmbl-login').removeClass('disabled');
+           }
+         }
+         </script>
+
+         </body>
+        </html>

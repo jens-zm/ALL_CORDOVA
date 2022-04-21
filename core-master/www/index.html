@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Framework7</title>
+  <link rel="stylesheet" href="css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+</head>
+<body>
+  <div id="app">
+    <div class="panel panel-left panel-cover panel-resizable panel-init">
+      <div class="page">
+        <div class="page-content">
+          <div class="block-title text-align-center">MENU APLIKASI</div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/accordion/" class="panel-close">Profil Pesantren</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Tentang Aplikasi</a>
+              </li>
+              <li>
+                <a href="/badge/" class="panel-close">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/buttons/" class="panel-close">Panduan</a>
+              </li>
+              <li>
+                <a href="/cards/" class="panel-close">Keluar</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block">
+             </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
+      <div class="page page-home">
+        <div class="navbar">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner sliding">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons if-not-md">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title">Asvie App</div>
+            <div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons if-not-md">info</i>
+                <i class="icon material-icons md-only">info</i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block-title block-title-medium text-align-center" id="nama">Jejen Zainal Muttaqien</div>
+          <div class="list components-list"> 
+            <div class="block">
+              <div class="row no-gap text-align-center">
+                <!-- Each "cell" has col-[width in percents] class -->
+
+                <div class="col-33 xsmall-50">
+                  <a href="/accordion/">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">import_contacts</i>
+                    </div>
+                    <p class="text-align-center menu-teks">مجموعة الاوراد</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-33 xsmall-50">
+                  <a href="#">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">announcement</i>
+                    </div>
+                    <p class="text-align-center menu-teks">Wasiat Ama</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-33 ">
+                  <a href="#">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">help_outline</i>
+                    </div>
+                    <p class="text-align-center menu-teks">Info Asvie</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-33 ">
+                  <a href="#">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">donut_small</i>
+                    </div>
+                    <p class="text-align-center menu-teks">Data Alumni</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-33 ">
+                  <a href="#">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">redeem</i>
+                    </div>
+                    <p class="text-align-center menu-teks">Donasi</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-33 ">
+                  <a href="#">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">perm_media</i>
+                    </div>
+                    <p class="text-align-center menu-teks">Galeri</p>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-33">
+                  <a href="#">
+                  <div class="card kotak-menu">
+                    <div class="card-content kotak-ikon">
+                      <i class="icons material-icons menu-ikon">settings</i>
+                    </div>
+                    <p class="text-align-center menu-teks">Pengaturan</p>
+                  </div>
+                </a>
+                </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+          <a href="#tab-1" class="tab-link tab-link-active">
+            <i class="icon material-icons md-only">home</i>
+            <span class="tabbar-label">Asvie</span>
+          </a>
+          <a href="#tab-2" class="tab-link">
+            <i class="icon material-icons md-only">import_contacts<span class="badge color-red">5</span></i>
+            <span class="tabbar-label">Majmu Aurod</span>
+          </a>
+          <a href="#tab-3" class="tab-link">
+            <i class="icon material-icons md-only">settings</i>
+            <span class="tabbar-label">Pengaturan</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/framework7.bundle.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

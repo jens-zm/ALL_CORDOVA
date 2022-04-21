@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "440209754950",
+    "firebase_url": "https://santrie-app.firebaseio.com",
+    "project_id": "santrie-app",
+    "storage_bucket": "santrie-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440209754950:android:a1447a2e39fc9539",
+        "android_client_info": {
+          "package_name": "com.santrie.forum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440209754950-jclrrmi022veib43u7pm8t5np7es00bt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.santrie.forum",
+            "certificate_hash": "c78513a9cc9542d035eb2dc4d0b91e87b9bef58f"
+          }
+        },
+        {
+          "client_id": "440209754950-93s3hcdenocqgnha90qoel3pg1vr9d5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSiQM_KfKDzjyVVXPSmPsUa4TtRrsP520"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440209754950-93s3hcdenocqgnha90qoel3pg1vr9d5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

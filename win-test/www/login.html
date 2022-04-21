@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>MI Kompa Online</title>
+         <!-- CSS  -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link href="css/materialize-icon.css" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/all.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/fontawesome.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    </head>
+    <body class="grey begron">
+        <!-- App start -->
+        <div class="app">
+            <!-- Desktop nav -->
+            <div class="navbar-fixed">
+                <nav class="purple" role="navigation">
+                  <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="tentang-app.html"><i class="material-icons left">info_outline</i>Tentang Aplikasi</a></li>
+                    </ul>
+                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="tentang-app.html" class="hide-on-large-only right"><i class="material-icons">info_outline</i></a>
+                    </div>
+                    <div class="progress" id="memproses">
+                         <div class="indeterminate"></div>
+                    </div>
+                </nav>
+
+            </div>
+
+            <!-- LEFT SIDEBAR	 -->
+            <ul id="nav-mobile" class="sidenav">
+                <div class="menu-mobile purple">
+                <h5 class="white-text name center-align">Menu Lengkap</h5>
+                </div>
+                <li class="li-vertical"><a href="https://mikompa.sch.id" target="_blank"><i class="fas fa-graduation-cap fa-lg"></i>&nbsp; &nbsp;Profil Madrasah</a></li>
+                <li class="li-vertical"><a href="tentang-app.html"><i class="fas fa-question-circle fa-lg"></i>&nbsp; &nbsp;Tentang Aplikasi</a></li>
+                <li class="li-vertical"><a href="#"><i class="fas fa-user-shield fa-lg"></i>&nbsp; &nbsp;Privacy Policy</a></li>
+            </ul>
+            <br>
+
+            <div class="container">
+                <div class="section">
+                  <div id="kontener-welcome" class="row">
+                  <!-- Login Form -->
+                  <div class="col s12 m6 l5">
+                    <div class="card rounded">
+                  <div class="card-content purple-text">
+                    <span class="card-title center-align"><b>Login Aplikasi</b></span>
+                    <div class="center-align">
+                    <p class="red-text" id="warning-login">Peringatan</p>
+                    </div>
+
+                    <div id="kotak_login" class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">account_circle</i>
+                          <input name="username" id="input_username" type="text" maxlength="10" minlength="6" class="validate">
+                          <label for="input_username">Username</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">lock</i>
+                          <input name="password" id="input_password" type="password" class="validate">
+                          <label for="input_password">Kata Sandi</label>
+                        </div>
+
+                        <br>
+                        <div class="center-align">
+                        <button class="btn waves-effect waves-light green disabled" id="tmbl_login">Masuk
+                          <i class="material-icons right">arrow_forward</i>
+                        </button>
+                        <br><br>
+                        </div>
+                    </div>
+                  </div>
+
+                  </div>
+                  </div>
+                  <!-- Download section -->
+                  <div class="col s12 m6 l7 hide-on-small-only">
+                    <div class="icon-block center-align">
+                      <h5 class="judul-dw center white-text"><b>MI Kompa Online</b></h5>
+                      <p class="white-text">Unduh aplikasi Android <b>Mi Kompa Online</b> untuk akses lebih mudah</p>
+                      <img class="hoverable" src="img/qr-download.svg" id="qr" alt="Qr Download Aplikasi MI Kompa Online">
+                      <br>
+                      <a class="waves-effect waves-light btn purple rouned-10"><i class="material-icons left">download</i>Download Aplikasi</a>
+                    </div>
+                  </div>
+                </div>
+                <br><br>
+              </div>
+            </div>
+
+
+        <!-- App End -->
+        </div>
+        <footer  class="page-footer orange hide-on-small-only">
+          <div class="container">
+            <div  class="row">
+              <div class="col l6 s12">
+                <h5 id="#tentang" class="white-text">MI Kompa Online</h5>
+                <p class="grey-text text-lighten-4"><b>MI Kompa Online</b> adalah platform digital untuk management kelas, pembelajaran online, serta administrasi guru dan murid di lingkungan Madrasah Ibtidaiyah Kompa - Parungkuda - Kab. Sukabumi</p>
+              </div>
+              <div class="col l6 s12">
+                <h5 class="white-text">MI Kompa Connect</h5>
+                <ul>
+                  <li><a class="white-text" href="https://mikompa.sch.id">Website</a></li>
+                  <li><a class="white-text" href="https://web.facebook.com/miskompa">Facebook</a></li>
+                  <li><a class="white-text" href="https://www.youtube.com/channel/UCqi5GKOKNemuGGIAJjs3ZtQ">Youtube</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container center-align">
+            Made by Love : <a class="white-text" href="https://wa.me/qr/GZMJ5ENMOGZVC1" target="_blank"> @jens_zm</a>
+            </div>
+          </div>
+        </footer>
+
+        <!-- cordova -->
+        <script src="cordova.js"></script>
+
+        <!-- materialize -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/fontawesome.min.js"></script>
+
+        <script src="js/aes.js"></script>
+        <script src="js/sha256.js"></script>
+
+        <script src="js/functions.js"></script>
+        <script src="js/profil-waktu.js"></script>
+
+
+        <script>
+          $('#logo').animate({
+            opacity: 1,
+          }, 3000 );
+          $('#alamat').animate({
+            width: "100%",
+            opacity: 1,
+          }, 2000 );
+          $('#isi-welocome').delay( 4000 ).fadeOut( 1000 );
+
+        // Cek Isi
+        var usr='';
+        var pass='';
+        $('#input_username').on('change', function(){
+          usr = $('#input_username').val().toLowerCase();
+          $('#input_username').val(usr);
+          cekIsi();
+        });
+        $('#input_password').on('change', function(){
+        pass = $('#input_password').val();
+        cekIsi();
+        });
+        function cekIsi(){
+        if (usr != '' && pass != '') {
+          $('#tmbl_login').removeClass('disabled');
+        }
+        }
+    cekUser();
+
+
+// Login
+ $(document).ready(function() {
+   $('#tmbl_login').click(function(){
+     $('#memproses').css('visibility','visible');
+     $.ajax({
+       url: 'https://script.google.com/macros/s/AKfycbwi22oRI80qbjUG2ig_upAdLEmm7cRWln5mxTZygUcqFBRRrX7C/exec?action=getUsers&ta='+tahunajaran,
+     }).done(function(hasil) {
+       $('#memproses').css('visibility','hidden');
+       var data = hasil;
+       var iv  = CryptoJS.enc.Base64.parse("");
+       var key=CryptoJS.SHA256(localStorage.getItem('kode'));
+       var users = JSON.parse(decryptData(data,iv,key));
+       var input_username = $('#input_username').val();
+       var input_password = $('#input_password').val();
+       for (var i = 0; i < users.length; i++) {
+         if (users[i]['USERNAME'] == input_username) {
+           if (users[i]['PASSWORD'] == input_password) {
+             var user = JSON.stringify(users[i]);
+             localStorage.setItem('user', user);
+             console.log("Login sukses");
+             console.log(user);
+             cekAkses();
+           }else {
+             $('#warning-login').html('Password salah..');
+             $('#warning-login').css('visibility', 'visible');
+             setTimeout(function() {
+               $('#warning-login').css('visibility', 'hidden');
+             },3000);
+           }
+         }
+       }
+     });
+
+
+ })
+});
+</script>
+    </body>
+</html>

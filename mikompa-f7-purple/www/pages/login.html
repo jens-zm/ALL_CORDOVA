@@ -1,0 +1,90 @@
+<div class="page" id="login-page"  data-name="login">
+    <div class="navbar">
+      <div class="navbar-bg sliding"></div>
+      <div class="navbar-inner">
+        <!-- <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel=".panel-login">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons md-only">menu</i>
+          </a>
+        </div> -->
+        <div class="title ">MI Kompa</div>
+        <!-- <div class="right">
+          <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+            <i class="icon f7-icons if-not-md">search</i>
+            <i class="icon material-icons md-only">search</i>
+          </a>
+        </div> -->
+        <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Search components"/>
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="page-content bg-color-gray">
+      <div class="block">
+      <div class="block-title block-title-medium text-align-center text-color-white">Login Aplikasi</div>
+      <!-- untuk aktivasi -->
+      <div class="row card-tengah">   <!-- start row -->
+      <div class="card col-100 small-75 medium-50 large-33 text-align-center">
+        <div class="card-header col-tengah">
+          <div class="block">
+            <p>Silahkan login terlebih dahulu</p>
+          </div>
+        </div>
+        <div class="card-content card-content-padding">
+          <div class="list no-hairlines-md">
+            <ul>
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Email/Username</div>
+                  <div class="item-input-wrap">
+                    <input id="username" type="text" placeholder="email/username" />
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-floating-label">Kata Sandi</div>
+                  <div class="item-input-wrap">
+                    <input id="password" type="password" placeholder="Isi nomor hp" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer center">
+          <br>
+          <div class="block">
+            <button id="aktifkan-app" class="button button-fill button-round disabled">Masuk</button>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>   <!-- end row -->
+  </div> <!-- end block -->
+
+  </div>
+</div>
+
+<script>
+  return {
+    // data: function () {
+    //   return {title: "Button Page"};
+    // },
+    methods: {
+      alertWorks(e) {
+        alert('works');
+      },
+    }
+  }
+</script>
+

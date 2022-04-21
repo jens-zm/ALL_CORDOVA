@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  <input name="file" id="files" type="file" multiple>
+  <input type='button' value='Upload' onclick='getFiles()'>
+  </body>
+  <script>
+  function getFiles() {
+    xUpload = new XMLHttpRequest();
+    let url = "https://script.google.com/macros/s/AKfycbzLUKDRgir8oYntFsIwUSBnrsZ6PxM9FE9rDlMF1IwJcVtj6hW7/exec"
+    // xUpload.open("GET", url, true);
+    // xUpload.send();
+    const f = document.getElementById('files');
+    [...f.files].forEach((file, i) => {
+      const fr = new FileReader();
+      fr.onload = (e) => {
+        const data = e.target.result.split(",");
+        const obj = {fileName: f.files[i].name, mimeType: data[0].match(/:(\w.+);/)[1], data: data[1]};
+        const hah = JSON.stringify(obj);
+
+        // xUpload.send();
+        console.log(hah);
+        xUpload.open("GET", url+"?aksi=upload&data="+hah, true);
+        xUpload.send();
+        // google.script.run.withSuccessHandler((id) => {
+        //   console.log(id);
+        // }).saveFile(obj);
+      }
+      fr.readAsDataURL(file);
+    });
+  }
+  </script>
+
+
+</html>

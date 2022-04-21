@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>MI Kompa Online</title>
+         <!-- CSS  -->
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link href="../css/materialize-icon.css" rel="stylesheet">
+        <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body class="grey begron">
+        <!-- App start -->
+        <div class="app">
+          <div class="navbar-fixed">
+            <nav class="purple" role="navigation">
+              <div class="nav-wrapper wadah"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="#"  id="notif"><i class="material-icons right">notifications_active</i>Notifikasi</a></li>
+                  <li><a href="#" onclick="logout()" ><i class="material-icons right red-text">power_settings_new</i>Logout</a></li>
+                </ul>
+                <a href="#" data-target="sidenav-1" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" class="right"><i id="muter2"class="material-icons">autorenew</i></a>
+              </div>
+            </nav>
+            </div>
+
+
+
+
+
+        <!-- LEFT SIDEBAR	 -->
+        <ul id="sidenav-1" class="sidenav sidenav-fixed">
+          <li class="hide-on-med-and-down z-depth-2 center-align" ><a href="index.html" id="menu-desk" class="purple darken-1 white-text">MI Kompa</a></li>
+          <li class="hide-on-med-and-down">
+            <div class="row center-align">
+              <a href="profil.html">
+              <div id="ava-desktop" class="col l7">
+                <img id="foto_profil" class="hoverable circle responsive-img " src="../img/blank_ava.webp">
+              </div>
+                <h6 id="nama_profil_l" class="nama_profil center-align blue-text"></h6>
+                <span id="jabatan_l" class="jabatan center-align grey-text"></span>
+              </a>
+          </div>
+        </li>
+        <div class="menu-mobile purple hide-on-large-only">
+          <h5 class="white-text name center-align">Menu Lengkap</h5>
+        </div>
+        <li class="li-vertical"><a class="active" href="#"><i class="material-icons active">home</i>Beranda</a></li>
+        <li class="li-vertical"><a href="profil.html"><i class="material-icons">assignment_turned_in</i>Profil</a></li>
+        <li class="li-vertical"><a href="#"><i class="material-icons">settings</i>Pengaturan</a></li>
+        <br>
+        <li class="hide-on-large-only"><a href="#" onclick="logOut()" class="red-text"><i class="material-icons red-text">power_settings_new</i>Keluar</a></li>
+        </ul>
+
+
+        <!-- RIGHT SIDEBAR	 -->
+        <ul id="sidenav-2" class="sidenav">
+          <li><a class="subheader">Notifikasi</a></li>
+          <li><a href="https://github.com/dogfalo/materialize/" target="_blank">Github</a></li>
+          <li><a href="https://twitter.com/MaterializeCSS" target="_blank">Twitter</a></li>
+          <li><a href="http://next.materializecss.com/getting-started.html" target="_blank">Docs</a></li>
+        </ul>
+
+
+        <main>
+          <div class="body-konten ">
+            <div class="card white card-kostum">
+              <div class="card-content">
+                <div class="row center-align">
+                  <div class="col s12 m5 hide-on-large-only">
+                      <a href="profil.html">
+                      <div id="ava-desktop" class="col s7 m6 l7">
+                        <img class="hoverable circle responsive-img " src="../img/blank_ava.webp">
+                      </div>
+                      <div class="col s12 m12">
+                       <h6 id="nama_profil_m" class="nama_profil center-align blue-text"></h6>
+                       <span id="jabatan_m" class="jabatan center-align grey-text"></span>
+                      </div>
+                      </a>
+
+                   <!-- absen guru -->
+
+
+
+                </div>
+                 <div class="col s12 m7 l8 border-round ">
+                  <div class="row padding-10">
+                    <div class="col s12 m12 l6 ">
+                      <h6 id="hari-tanggal"class="center-align"></h6>
+                    </div>
+                    <div class="col s12 m12 l6 red-text" id="ket-hari">
+                      <p id="isi-ket"></p>
+                    </div>
+
+                     <div class="col s12 m6 l6 tombol-absen">
+                      <a id="tmbl-msk" class="modal-trigger waves-effect waves-light btn tmbl-absen green disabled " href="#absen-masuk">Isi Absen Hari Ini</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              </div>
+          </div>
+        </main>
+
+        <!-- App End -->
+        </div>
+        <!-- cordova -->
+        <script src="../cordova.js"></script>
+        <!-- materialize -->
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/init.js"></script>
+        <script src="../js/profil-waktu.js"></script>
+        <script src="js/index.js"></script>
+        <script src="../js/pulltorefresh.min.js"></script>
+        <script src="../js/functions.js"></script>
+        <script src="../js/chart.min.js"></script>
+
+
+        <script type="text/javascript">
+        // Cek Akses Murid
+         cekMurid();
+          const usr = JSON.parse(localStorage.getItem('user'));
+          $('#nama_profil_l').html(usr['NAMA_LENGKAP']);
+          $('#foto_profil').attr('src', usr['AVA']);
+          $('#nama_profil_m').html(usr['NAMA_LENGKAP']);
+          $('#jabatan_l').html(usr['KELAS']);
+          $('#jabatan_m').html(usr['KELAS']);
+          $('#profil_hari').html(hariini+', '+tanggal+' '+bulan+' '+tahun);
+
+
+
+        // $('#notif').click(function(){
+        //   $('#sidenav-2').sidenav('open');
+        //   })
+        //     $('#logo').animate({
+        //       opacity: 1,
+        //     }, 3000 );
+        //     $('#alamat').animate({
+        //       width: "100%",
+        //       opacity: 1,
+        //     }, 2000 );
+        //     $('#isi-welocome').delay( 4000 ).fadeOut( 1000 );
+        //
+        //     // Chart
+        //     var ctx = document.getElementById('myChart').getContext('2d');
+        //     var myChart = new Chart(ctx, {
+        //     type: 'pie',
+        //     data: {
+        //         labels: ['H', 'S', 'I'],
+        //         datasets: [{
+        //             label: 'Kehadiran',
+        //             data: [8, 2, 1],
+        //             backgroundColor: [
+        //                 "#4caf50", "#ef6c00","#dbe273"
+        //
+        //             ]
+        //         }]
+        //     },
+        // });
+        //    // Chart
+        //     var ctx = document.getElementById('jumlah_guru').getContext('2d');
+        //     var myChart = new Chart(ctx, {
+        //     type: 'pie',
+        //     data: {
+        //         labels: ['L', 'P'],
+        //         datasets: [{
+        //             label: 'Jenis Kelamin',
+        //             data: [5, 8],
+        //             backgroundColor: [
+        //                 "#3e95cd", "#ee6e73"
+        //
+        //             ]
+        //         }]
+        //     },
+        // });
+        //
+        //
+        //     // Bar chart
+        //     new Chart(document.getElementById("bar-chart"), {
+        //         type: 'bar',
+        //         data: {
+        //           labels: ["I-A", "I-B", "II-A", "II-B", "III-A","III-B", "IV-A", "IV-B", "V-A", "V-B", "VI"],
+        //           datasets: [
+        //             {
+        //               label: "Jumlah (kelas)",
+        //               backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3cba9f",],
+        //               data: [39,40,30,30,25,38,26,28,32,35,50]
+        //             }
+        //           ]
+        //         },
+        //         options: {
+        //           legend: { display: false },
+        //           title: {
+        //             display: true,
+        //             text: 'Predicted world population (millions) in 2050'
+        //           }
+        //         }
+        //     });
+
+
+          </script>
+    </body>
+</html>

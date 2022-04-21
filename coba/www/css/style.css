@@ -1,0 +1,348 @@
+/* kostum css */
+@font-face {
+    font-family: 'Impact';
+    src: url('../fonts/Impact.woff2') format('woff2'),
+        url('../fonts/Impact.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.wadah {
+  margin: 0 auto;
+  width: 95%;
+}
+.body-konten{
+  padding:1px 10px;
+  min-height:100vh;
+}
+/* untuk tablet */
+@media only screen and (min-width: 601px) {
+  .wadah {
+    width: 95%;
+  }
+}
+/* untuk desktop large */
+@media only screen and (min-width: 993px) {
+  .wadah {
+    width: 90%;
+  }
+  .body-konten{
+    margin-left:20%;
+    padding:1px 16px;
+    min-height:100vh;
+  }
+
+
+}
+
+/* untuk nav vertical */
+
+
+ul.nav-vertical {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li.li-vertical a {
+  font-weight: bold;
+  display: block;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+li.li-vertical a.active {
+  background-image: url('../img/bg-repeat.webp');
+  font-weight: bold;
+  /* background-color: rgb(158 158 158); */
+  color: white;
+}
+
+li.li-vertical a:hover:not(.active) {
+  background-image: url('../img/bg-repeat.webp');
+  font-weight: bold;
+  color: white;
+}
+/* kostum card untuk body depan */
+.card-kostum{
+  border-radius: 20px;
+  min-height: 85vh;
+}
+#ava-depan{
+  padding: 0 25%;
+  margin: auto;
+}
+#ava-mobile{
+  padding: 0% 25% 0% 25%;
+  margin: auto;
+}
+.rounded{
+  border-radius: 20px;
+}
+.tmbl-absen{
+  text-transform: capitalize !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  margin: 0px -15px
+}
+.border-round{
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0px -15px
+}
+.nama-prof{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px 5px;
+
+}
+.status-prof{
+  font-size: 14px;
+  padding-bottom: 10px;
+  color:grey;
+  font-weight: bold;
+  margin: 0px 5px;
+
+}
+.kol{
+  border-radius: 10px;
+  background-color: #9e9e9e;
+  color: white;
+  min-height: 121px;
+}
+.kol:hover{
+  border-radius: 10px;
+  background-color: #ef6c00;
+  color: white;
+}
+.judul-sum{
+  font-size: 20px;
+}
+hr.solid{
+  border-top: 1px solid #bbb;
+  margin: 0px;
+  padding: 0px;
+}
+.p-data{
+  font-size: 12px;
+}
+.minus-margin{
+  margin: 0px -15px
+}
+td.td-3{
+  padding: 2px 5px;
+}
+td.td-4{
+  padding: 0.5px 5px;
+}
+#dd-notifikasi{
+  min-width: 300px;
+}
+.rouned-10{
+  border-radius: 10px;
+}
+#memproses{
+  margin: 0px;
+  position: fixed;
+  height: 10px;
+  visibility: hidden;
+}
+.tmb-abs{
+  border-radius: 7px;
+  padding: 5px 0px;
+}
+.no-padding{
+  margin: 0px !important;
+}
+.tabel-absen {
+  border: 1px solid #cfd8dc;
+  border-collapse: collapse;
+}
+.tabel-banyak{
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.padding-small{
+  padding: 0px 5px;
+}
+
+.tabel-luas::-webkit-scrollbar{
+     height: 15px;
+     width: 4px;
+     background: #b3e5fc;
+ }
+ .tabel-luas::-webkit-scrollbar-thumb:horizontal{
+     background: #1e88e5;
+     border-radius: 15px;
+ }
+.tabel-jarak{
+  min-width: 50% !important;
+}
+
+
+label.absen{
+  border: 1px solid black;
+  padding: 5px 7px;
+  border-radius: 10px;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+}
+input[type="radio"]:checked.hadir + label.absen {
+    border: 1px solid #43a047;
+    background: #43a047;
+    color: white;
+  }
+input[type="radio"]:checked.sakit + label.absen {
+  border: 1px solid orange;
+    background: orange;
+    color: white;
+  }
+input[type="radio"]:checked.izin + label.absen {
+  border: 1px solid orange;
+    background: yellow;
+    color: black;
+  }
+input[type="radio"]:checked.alpa + label.absen {
+  border: 1px solid red;
+    background: red;
+    color: white;
+  }
+  .begron{
+  background-image: url('../img/bg-repeat.webp');
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  background-position: center;
+  background-repeat: repeat;
+
+  }
+  #muter2{
+    margin-right: 15px;
+    /* position: relative; */
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 2s linear infinite;
+    visibility: hidden;
+  }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/* Tag di login */
+.download-area{
+  border: 1px solid black;
+}
+
+img#qr{
+  max-width: 200px;
+  padding-top: -10px !important;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+.judul-dw{
+  padding-button: 5px;
+}
+.menu-mobile{
+  padding: 8px;
+}
+
+
+
+/* edit warna tab */
+.tabs .tab a{
+    color:#03a9f4;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+    background-color:#f57c00;
+    color:white;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+    background-color:#f57c00;
+    color:white;
+} /*Background and text color when a tab is active*/
+.tabs .tab a:focus.active {
+    background-color:#ef6c00;
+    color:white;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+    background-color:#0277bd;
+} /*Color of underline*/
+
+textarea.materialize-textarea#isi-tugas{
+  min-height: 100px;
+  border: 1px solid grey;
+  border-radius: 10px;
+
+}
+
+.isian-text{
+  margin-top: 5px;
+  border: 1px solid black;
+}
+div.row.isian-text{
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+/* jam diindex */
+#buat-jam,#jam-plg{
+  visibility: hidden;
+}
+#logo{
+  opacity: 0;
+}
+
+.typewriter h5 {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0px;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+#login-cont{
+  opacity: 0;
+}
+
+#teks-sekolah{
+  font-family :Impact,serif;
+  font-weight: normal !important;
+}
+.impact{
+  font-family :Impact,serif;
+}
+.brand-logo{
+  font-size: 26px !important;
+}

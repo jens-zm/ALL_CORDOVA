@@ -1,0 +1,21 @@
+{
+	"satu":{
+		"hal" : 1,
+		"bab"	: "Sampul Depan",
+		"ttg"	: "Sampul Depan",
+		"link"	: "#1"
+	},
+	"dua":{
+		"hal" : 2,
+		"bab"	: "Pengesahan",
+		"ttg"	: "Pengesahan",
+		"link"	: "#2"
+	},
+	"tiga": {
+		"hal" : 3,
+		"bab"	: "Kata Pengantar",
+		"ttg"	: "Kata Pengantar",
+		"link"	: "#3"
+	}
+	
+}

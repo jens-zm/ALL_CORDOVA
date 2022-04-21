@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<!--         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/ionic.bundle.css" />
+        <title>Hello World</title>
+    </head>
+    <body>
+ <ion-app>
+      <ion-content fullscreen class="ion-padding" scroll-y="false">
+        <ion-slides>
+          <ion-slide>
+            <div class="slide">
+              <img src="./img/slide-1.png" />
+              <h2>Selamat datang</h2>
+              <p>
+                Ini adalah <b>Aplikasi MI Kompa Online</b> is a practical preview of the ionic framework in action, and a
+                demonstration of proper code use.
+              </p>
+            </div>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="./img/slide-2.png" />
+            <h2>What is Ionic?</h2>
+            <p>
+              <b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps
+              with web technologies like HTML, CSS, and JavaScript.
+            </p>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="./img/slide-3.png" />
+            <h2>What is Appflow?</h2>
+            <p>
+              <b>Appflow</b> is a powerful set of services and features built on top of Ionic Framework that brings a
+              totally new level of app development agility to mobile dev teams.
+            </p>
+          </ion-slide>
+
+          <ion-slide>
+            <img src="./img/slide-4.png" />
+            <h2>Sudah Siap?</h2>
+            <ion-button fill="clear">Ayo mulai <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+          </ion-slide>
+        </ion-slides>
+      </ion-content>
+    </ion-app>
+
+        <script src="cordova.js"></script>
+            <script type="module" src="js/ionic.esm.js"></script>
+<script nomodule src="js/ionic.js"></script>
+        <script src="js/index.js"></script>
+        <script>
+            console.log('berjalan')
+            var slides = document.querySelector('ion-slides');
+
+            // Optional parameters to pass to the swiper instance.
+            // See http://idangero.us/swiper/api/ for valid options.
+            slides.options = {
+              initialSlide: 1,
+              speed: 400
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "383123078574",
+    "project_id": "mi-kompa",
+    "storage_bucket": "mi-kompa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383123078574:android:4f8e10994ba0f0c19c5c3f",
+        "android_client_info": {
+          "package_name": "coba.mikom.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383123078574-hkg5a4tcid8v23pph57nl66hur74bpi6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo6zkwemf2qxiKnwiW1_Wt72S6rFzy4t8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383123078574-hkg5a4tcid8v23pph57nl66hur74bpi6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

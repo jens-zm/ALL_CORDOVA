@@ -1,0 +1,49 @@
+.preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #fff;
+    }
+ .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font: 14px arial;
+    }
+
+#tutup {
+	display: none;
+}
+
+#pilih-absen {
+	display: none;
+}
+
+.datepicker,
+.table-condensed {
+  width: 300px !important;
+  height:300px !important;
+}
+
+#teks-kelas {
+	font-family: Arial, Roboto;
+	font-weight: bold;
+	font-size: 50px;
+
+}
+
+#bk1, #namaBuka, #ttp1, #namaTutup {
+    font-size: 25px;
+}
+
+#kalkulasi {
+    color: white;
+    background: salmon;
+    border-radius: 15px;
+    width: 95%;
+
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<body class="blue-grey darken-1">
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Aplikasi MI Kompa</title>
+
+  <!-- CSS  -->
+  <link href="css/material-icon.css" type="text/css" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</header>
+
+  <div class="navbar-fixed">
+  <nav class="purple darken-4" role="navigation" id="navigasi">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">MI KOMPA</a>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+
+
+  <div class="row" id="wilujeng">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text center">
+        <div class="center" id="sel-datang">
+          <h4 id="nama-mu" class="orange-text">Selamat datang</h4>
+          <p id="berikut">Di Aplikasi Sistem Management Kelas</p>
+        </div>
+        <img id="logo" class="responsive-img" width="650" src="img/logo.webp">
+        <div id="ket-bwh">
+          <span class="card-title center"><b>MI KOMPA</b></span>
+          <p>Cipanggulaan - Kompa - Parungkuda</p>
+        </div>
+      </div>
+      <div class="card-action center">
+        <a class="waves-effect waves-light btn pulse" id="strt-btN" onclick="mulaiApp()">Mulai Aplikasi</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container Start -->
+<div class="container">
+<div id="pilih-kelas">
+    <div class="col s12">
+      <h5 class="center">Menyiapkan Aplikasi</h5>
+      <div class="card grey lighten-3">
+        <div class="card-content center">
+          <span class="card-title purple-text" id="pembuatan"><b>Pembuatan Kelas</b></span>
+          <p id="silahkan-pil">Silahkan pilih kelas yang akan dibuat</p>
+          <br>
+          <div id="pil-kels">
+          <select class="browser-default select-css" id="data-kel">
+            <option value="" disabled selected>Tap disini untuk pilih...</option>
+          </select>
+
+          </div>
+
+          <div id="pil-ta">
+          <select class="browser-default select-css" id="data-ta">
+            <option value="" disabled selected>Tap disini untuk pilih...</option>
+          </select>
+
+          </div>
+          <div id="pross-buat">
+            <p id="stat-pross"><b>Memproses permintaan..</b></p>
+            <div class="progress" id="anima-pross">
+                <div class="indeterminate"></div>
+            </div>
+            <div id="anima-sukses">
+            <p id="stat-suks"><b>Kelas berhasil di buat</b></p>
+            <i class="material-icons green-text medium">check_circle</i>
+            </div>
+          </div>
+          <div id="pross-err">
+            <p><b>Error : ada yang tidak beres..</b></p>
+            <i class="material-icons red-text medium">sentiment_very_dissatisfied</i>
+            <p>Periksa koneksi internet lalu coba lagi</p>
+          </div>
+        </div>
+        <div class="card-action center" id="tempat-tombol">
+            <button class="btn waves-effect waves-light" id="tmbl-buat" onclick="buatKel()">Buat Kelas</button>
+            <button class="btn waves-effect waves-light" id="tmbl-ta" onclick="buatTa()">Buat Tahun Ajaran</button>
+            <button class="btn waves-effect waves-light red" id="tmbl-coba" onclick="buatKel()">Coba Lagi</button>
+            <button class="btn waves-effect waves-light orange center" id="nextz" onclick="selanj()">Selanjutnya</button>
+
+            <!-- <a class="waves-effect waves-light btn orange" id="nextz" onclick="buatKel()">Selanjutnya</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="beraksi">
+  <ul class="collection with-header">
+  <li id="ganjil" class="collection-item"><div>Membuat folder tahun ajaran...<a href="#!" class="secondary-content"><i class="material-icons rotating">autorenew</i></i></a></div></li>
+  <li id="genap" class="collection-item"><div>Membuat folder semester...<a href="#!" class="secondary-content"><i class="material-icons rotating">autorenew</i></a></div></li>
+  <li id="copGan" class="collection-item"><div>Menyalin data-data file...<a href="#!" class="secondary-content"><i class="material-icons rotating">autorenew</i></a></div></li>
+  <li id="copGen" class="collection-item"><div>Mngkonfigurasi kelas...<a href="#!" class="secondary-content"><i class="material-icons rotating">autorenew</i></a></div></li>
+</ul>
+
+</div>
+
+
+</div>
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+
+  </body>
+</html>

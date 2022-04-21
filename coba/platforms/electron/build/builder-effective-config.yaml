@@ -1,0 +1,15 @@
+directories:
+  output: 'C:\cordova\coba\platforms\electron\build'
+  buildResources: 'C:\cordova\coba\platforms\electron\build-res'
+  app: 'C:\cordova\coba\platforms\electron\www'
+appId: test.percobaan.app
+productName: PerCoba
+electronVersion: 4.0.1
+electronDownload:
+  version: 4.0.1
+win:
+  icon: installer.png
+  target:
+    - target: nsis
+      arch:
+        - x64

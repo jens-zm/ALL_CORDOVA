@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda">
+        <meta name="keywords" content="MI Kompa Parungkuda Sukabumi, e learning madrasah">
+        <meta name="author" content="MI Kompa">
+        <!-- Meta Social -->
+        <meta property="og:site_name" content="MI Kompa Online">
+        <meta property="og:title" content="MI Kompa Online" />
+        <meta property="og:description" content="Platform Digital Terintegrasi untuk Management Kelas, e-Learning, serta Administrasi Murid dan Guru di lingkungan  Madrasah Ibtidaiyah Kompa - Kec. Parungkuda" />
+        <meta property="og:image" itemprop="image" content="img/logo.png">
+        <meta property="og:type" content="website" />
+        <meta property="og:updated_time" content="1440432930" />
+      
+          <!-- Meta browser -->
+        <meta name="theme-color" content="#29b6f6"/>
+        <meta name="msapplication-navbutton-color" content="#29b6f6"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="#29b6f6"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/> 
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <title>MI Kompa Online</title>
+         <!-- CSS  -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link href="css/materialize-icon.css" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body class="grey begron">
+        <!-- App start -->
+        <div class="app">
+            <!-- Desktop nav -->
+            <div class="navbar-fixed">
+                <nav class="light-blue" role="navigation">
+                  <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">MI Kompa</a>
+                    <ul class="right hide-on-med-and-down">
+                      <li><a href="#" target="_blank"><i class="material-icons left">info_outline</i>Tentang Aplikasi</a></li>
+                    </ul>
+                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#" target="_blank" class="hide-on-large-only right"><i class="material-icons">info_outline</i></a>
+                    </div>
+                </nav>
+            </div>
+            <!-- LEFT SIDEBAR	 -->
+            <ul id="nav-mobile" class="sidenav">
+                <div class="menu-mobile light-blue">
+                <h5 class="white-text name center-align">Menu Lengkap</h5>
+                </div>
+                <li><a href="https://mikompa.sch.id" target="_blank"><i class="material-icons">school</i>Profil Madrasah</a></li>
+                <li><a href="#"><i class="material-icons">info</i>Tentang Aplikasi</a></li>
+                <li><a href="#"><i class="material-icons">download</i>Download Aplikasi</a></li>
+                <li><a href="#"><i class="material-icons">pan_tool</i>Pripacy Policy</a></li>
+            </ul>
+            <br>
+            <div id="isi-welocome"class="container">
+                <div class="section">
+                  <div id="kontener-welcome" class="row">
+                  <div class="col s12 m5">
+                     <div class="">
+                      <div class="blue-text">
+                        <img id="logo" src="img/logo.webp" class="responsive-img" alt="">
+                      </div>
+                    </div>
+                  </div>
+            
+                    <div class="col s12 m7">
+                      <div class="typewriter icon-block center-align">
+                        <h5 id="teks-sekolah" class="center white-text">Madrasah Ibtidaiyah Kompa</h5>
+                        <p id="alamat" class="white-text">Alamat : Jl. Raya Siliwangi Kp. Cipanggulaan Des. Kompa Kec. Parungkuda - Kabupaten Sukabumi</p>
+                      </div>
+                      <div class="">
+                      </div>
+                    </div>
+
+                    <div class="col s12 m7 center-align">
+                        <div class="preloader-wrapper big active">
+                            <div class="spinner-layer spinner-yellow-only">
+                              <div class="circle-clipper left">
+                                <div class="circle"></div>
+                              </div><div class="gap-patch">
+                                <div class="circle"></div>
+                              </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                  </div>
+            
+                </div>
+                <br><br>
+              </div>
+        <!-- App End -->
+        </div>
+        <!-- cordova -->
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <!-- materialize -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+
+        <script type="text/javascript">
+            $('#logo').animate({
+              opacity: 1,
+            }, 3000 );
+            $('#alamat').animate({
+              width: "100%",
+              opacity: 1,
+            }, 2000 );
+            $('#isi-welocome').delay( 4000 ).fadeOut( 1000 );
+
+            $.ajax({
+            url:"rute.php",
+            success:function(rute) {
+              console.log(rute);
+            // setTimeout(function() { 
+            //   $(location).attr('href',rute)
+            // }, 4700);
+             
+            } 
+          });
+          </script>
+    </body>
+</html>
